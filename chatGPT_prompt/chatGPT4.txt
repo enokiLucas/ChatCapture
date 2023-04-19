@@ -1,0 +1,56 @@
+ChatGPT to PDF
+	Export a conversation with ChatGPT in PDF format.
+
+Ingredients
+	-Internet Browser Add-on.
+	-Button on the navigation bar(along side others add-ons) that opens a new tab.
+	-New tab where it will be possible to personalize the PDF to be exported.
+
+Instructions
+	1. Button at the add-ons bar.
+		When clicked will open a new tab.
+
+	2. Tab for preparing the PDF for export.
+
+	3. Will have a option to select only ChatGPT output. Default will be to print both input and output.
+
+	4. Will have the option to select a section of the conversation and not the entire chat.
+
+	5. Will ask the location to save the PDF. Default will be the Browser default downloads location.
+
+	6. Button "Create PDF". Will create a PDF with the select chat based on the previous settings.
+
+---------------------------
+
+I understand you want to create a browser add-on to export a conversation with ChatGPT in PDF format. Let me summarize the requirements and features based on your pseudocode:
+
+Title: ChatGPT to PDF Add-on
+
+Description: A browser add-on that allows users to export a conversation with ChatGPT in PDF format, with options to customize the appearance and content of the exported PDF.
+
+Features:
+
+Add-on button:
+
+Located in the browser's navigation bar, alongside other add-ons.
+Opens a new tab for PDF export settings when clicked.
+PDF export settings tab:
+
+Allows users to prepare and customize the PDF for export.
+Includes the following options:
+Select content to export:
+
+Option to export only ChatGPT output or both user input and ChatGPT output.
+Default is to export both input and output.
+Select a section of the conversation:
+
+Option to choose a specific section of the conversation instead of exporting the entire chat.
+Choose save location:
+
+Prompt to select the location where the PDF should be saved.
+Default is the browser's default downloads location.
+Create PDF button:
+
+Generates a PDF based on the selected settings and content.
+Saves the PDF to the chosen location.
+With this summary, you can start developing your browser add-on, keeping in mind the features and options you want to include. If you need help with specific aspects of the add-on or additional guidance, feel free to ask.
