@@ -1,0 +1,16 @@
+To build a browser add-on for exporting ChatGPT conversations to PDF, you can use the following technologies and frameworks:
+
+WebExtensions API: WebExtensions is a cross-browser system for developing browser extensions. It is compatible with modern browsers like Google Chrome, Mozilla Firefox, Microsoft Edge, and others. Using the WebExtensions API allows you to create a single codebase that can be adapted for multiple browsers with minimal changes. Refer to the respective browser's documentation for specific implementation details:
+
+Chrome: https://developer.chrome.com/docs/extensions/mv3/
+Firefox: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions
+Edge: https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/
+JavaScript: Use JavaScript as the primary programming language for building the add-on, as it is supported by all major browsers and the WebExtensions API.
+
+HTML and CSS: Use HTML and CSS to create the user interface for the PDF export settings tab, including options for selecting content, conversation sections, and save location.
+
+jsPDF: jsPDF is a popular JavaScript library for generating PDF files on the client-side. Use this library to create PDF files from the selected conversation content. Find more information and documentation at https://github.com/parallax/jsPDF.
+
+Optional CSS Framework: To streamline the design and layout of the user interface, you may choose to use a lightweight CSS framework like Bulma (https://bulma.io/) or Tailwind CSS (https://tailwindcss.com/). These frameworks provide pre-built components and utilities that can help you create a clean and responsive UI without spending too much time on custom styling.
+
+Using these technologies and frameworks, you can build a browser add-on that is compatible with major browsers and efficiently exports ChatGPT conversations to PDF format.
