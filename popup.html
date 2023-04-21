@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatCapture</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>ChatCapture</h1>
+  <form id="export-form">
+    <label for="content-select">Content to export:</label>
+    <select id="content-select">
+      <option value="both">Both input and output</option>
+      <option value="output">Only ChatGPT output</option>
+    </select>
+
+    <label for="range-start">Start from message:</label>
+    <input type="number" id="range-start" min="1" step="1" value="1">
+
+    <label for="range-end">End at message:</label>
+    <input type="number" id="range-end" min="1" step="1">
+
+    <button type="submit" id="create-pdf">Create PDF</button>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>
