@@ -1,5 +1,5 @@
 // Function to extract chat messages based on user preferences.
-function extractMessages(contentOption, rangeStart, rangeEnd) {
+const extractMessages = (contentOption, rangeStart, rangeEnd) => {
   // Identify the container holding the chat messages.
   const chatContainer = document.querySelector('.chat-container-selector');
 
@@ -20,7 +20,7 @@ function extractMessages(contentOption, rangeStart, rangeEnd) {
 }
 
 // Function to generate the PDF with the extracted messages.
-function createPdf(messages) {
+const createPdf = (messages) => {
   // Add your logic here to generate the PDF using jsPDF library or other methods.
 
   // Example:
