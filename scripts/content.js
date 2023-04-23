@@ -1,7 +1,7 @@
 // Function to extract chat messages based on user preferences.
 const extractMessages = (contentOption, rangeStart, rangeEnd) => {
   // Identify the container holding the chat messages.
-  const chatContainer = document.querySelector('.chat-container-selector');
+  const chatContainer = document.querySelector('#__next > div.overflow-hidden.w-full.h-full.relative.flex > div.flex.h-full.max-w-full.flex-1.flex-col > main > div.flex-1.overflow-hidden > div > div > div');
 
   // Extract individual chat messages.
   const messages = chatContainer.querySelectorAll('.message-selector');
