@@ -1,3 +1,5 @@
+import jsPDF from 'jspdf';
+
 const extractMessages = (contentOption, rangeStart, rangeEnd) => {
   // Identify the container holding the chat messages.
   const chatContainer = document.querySelector('.flex.flex-col.items-center.text-sm');
