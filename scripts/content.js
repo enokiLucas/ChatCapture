@@ -16,7 +16,7 @@ const extractMessages = (contentOption, rangeStart, rangeEnd) => {
     messages = Array.from(chatInput).concat(Array.from(chatOutput));
   }
 
-  const filteredMessages = messages.filter((message, index) => {
+  const filteredMessages = messages.filter((_, index) => {
     return index + 1 >= rangeStart && index + 1 <= rangeEnd;
   });
 
