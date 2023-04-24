@@ -25,7 +25,7 @@
       "js": ["scripts/content.js"]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  }
+  //"background": {
+  //  "service_worker": "background.js"
+  //}
 }
