@@ -1,19 +1,21 @@
-// Function to extract chat messages based on user preferences.
 const extractMessages = (contentOption, rangeStart, rangeEnd) => {
   // Identify the container holding the chat messages.
   const chatContainer = document.querySelector('.flex.flex-col.items-center.text-sm');
 
   // Extract individual chat messages.
-  const messages = chatContainer.querySelectorAll('.message-selector');
+  const chatInput = chatContainer.querySelectorAll('.input-message-selector');
+  const chatOutput = chatContainer.querySelectorAll('.output-message-selector');
 
   // Filter messages based on user preferences (e.g., both input and output or just output).
-  const filteredMessages = Array.from(messages).filter((message, index) => {
-    if (contentOption === 'output') {
-      return message.classList.contains('output-message-selector') &&
-             index + 1 >= rangeStart && index + 1 <= rangeEnd;
-    } else {
-      return index + 1 >= rangeStart && index + 1 <= rangeEnd;
-    }
+  let messages;
+  if (contentOption === 'output') {
+    messages = Array.from(chatOutput);
+  } else {
+    messages = Array.from(chatInput).concat(Array.from(chatOutput));
+  }
+
+  const filteredMessages = messages.filter((message, index) => {
+    return index + 1 >= rangeStart && index + 1 <= rangeEnd;
   });
 
   return filteredMessages.map((message) => message.textContent);
