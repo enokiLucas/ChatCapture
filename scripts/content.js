@@ -23,6 +23,15 @@ const extractMessages = (contentOption, rangeStart, rangeEnd) => {
   return filteredMessages.map((message) => message.textContent);
 }
 
+const getCurrentDate = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  return `${year}_${month}_${day}`;
+}
+
+
 // Function to generate the PDF with the extracted messages.
 const createPdf = (messages) => {
   
@@ -31,6 +40,8 @@ const createPdf = (messages) => {
 		pdf.text(message, 10, 10 + index * 10);
 	});
 
+	const currentDate = getCurrentDate();
+  pdf.save(`${currentDate}_chat.pdf`);
   
 }
 
