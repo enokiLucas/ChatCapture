@@ -4,7 +4,7 @@ const extractMessages = (contentOption, rangeStart, rangeEnd) => {
 
   // Extract individual chat messages.
   const chatInput = chatContainer.querySelectorAll('.input-message-selector');
-  const chatOutput = chatContainer.querySelectorAll('.output-message-selector');
+  const chatOutput = chatContainer.querySelectorAll('.markdown.prose.w-full.break-words');
 
   // Filter messages based on user preferences (e.g., both input and output or just output).
   let messages;
