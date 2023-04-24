@@ -3,7 +3,7 @@ const extractMessages = (contentOption, rangeStart, rangeEnd) => {
   const chatContainer = document.querySelector('.flex.flex-col.items-center.text-sm');
 
   // Extract individual chat messages.
-  const chatInput = chatContainer.querySelectorAll('.input-message-selector');
+  const chatInput = chatContainer.querySelectorAll('.min-h-[20px].flex.flex-col.items-start gap-4.whitespace-pre-wrap');
   const chatOutput = chatContainer.querySelectorAll('.markdown.prose.w-full.break-words');
 
   // Filter messages based on user preferences (e.g., both input and output or just output).
