@@ -25,14 +25,13 @@ const extractMessages = (contentOption, rangeStart, rangeEnd) => {
 
 // Function to generate the PDF with the extracted messages.
 const createPdf = (messages) => {
-  // Add your logic here to generate the PDF using jsPDF library or other methods.
+  
+	const pdf = new jsPDF();
+	messages.forEach((message, index) => {
+		pdf.text(message, 10, 10 + index * 10);
+	});
 
-  // Example:
-  // const pdf = new jsPDF();
-  // messages.forEach((message, index) => {
-  //   pdf.text(message, 10, 10 + index * 10);
-  // });
-  // pdf.save('ChatCapture.pdf');
+  
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
