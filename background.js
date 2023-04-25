@@ -13,3 +13,9 @@ chrome.action.onClicked.addListener((tab) => {
   // Send a message to the content script to open the extension popup
   chrome.tabs.sendMessage(tab.id, { action: 'open-popup' });
 });
+
+chrome.action.onClicked.addListener((tab) => {
+  chrome.tabs.executeScript(tab.id, {
+    file: 'scripts/content.js',
+  });
+});
