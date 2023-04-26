@@ -10,8 +10,7 @@
   "permissions": [
     "tabs",
     "downloads",
-    "https://chat.openai.com/*",
-		"scripting"
+    "scripting"
   ],
   "action": {
     "default_icon": {
@@ -19,5 +18,14 @@
     },
     "default_title": "ChatCapture",
     "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["libs/jspdf.umd.min.js", "scripts/content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
 }
