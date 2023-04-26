@@ -9,7 +9,7 @@ document.getElementById('export-form').addEventListener('submit', async (event) 
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ['content-script.js']
+    files: ['scripts/content.js']
   }, () => {
     // Ensure the content script is injected before sending the message.
     chrome.tabs.sendMessage(tab.id, {
