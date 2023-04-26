@@ -7,16 +7,15 @@ document.getElementById('export-form').addEventListener('submit', async (event) 
 
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-  chrome.scripting.executeScript({
+  await chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ['scripts/content.js']
-  }, () => {
-    // Ensure the content script is injected before sending the message.
-    chrome.tabs.sendMessage(tab.id, {
-      action: 'create-pdf',
-      contentOption,
-      rangeStart,
-      rangeEnd
-    });
+    files: ['libs/jspdf.umd.min.js', 'scripts/content.js'],
+  });
+
+  chrome.tabs.sendMessage(tab.id, {
+    action: 'create-pdf',
+    contentOption,
+    rangeStart,
+    rangeEnd,
   });
 });
