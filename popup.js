@@ -9,13 +9,14 @@ document.getElementById('export-form').addEventListener('submit', async (event) 
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ['scripts/content.js']
-  });
-
-  chrome.tabs.sendMessage(tab.id, {
-    action: 'create-pdf',
-    contentOption,
-    rangeStart,
-    rangeEnd
+    files: ['content-script.js']
+  }, () => {
+    // Ensure the content script is injected before sending the message.
+    chrome.tabs.sendMessage(tab.id, {
+      action: 'create-pdf',
+      contentOption,
+      rangeStart,
+      rangeEnd
+    });
   });
 });
