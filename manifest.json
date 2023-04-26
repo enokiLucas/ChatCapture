@@ -10,7 +10,8 @@
   "permissions": [
     "tabs",
     "downloads",
-    "*://*/*"
+    "*://*/*",
+		"scripting"
   ],
   "action": {
     "default_icon": {
