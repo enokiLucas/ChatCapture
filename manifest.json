@@ -10,7 +10,7 @@
   "permissions": [
     "tabs",
     "downloads",
-    "https://*/*",
+    "https://chat.openai.com/*",
 		"scripting"
   ],
   "action": {
