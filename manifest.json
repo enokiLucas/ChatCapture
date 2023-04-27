@@ -10,8 +10,7 @@
   "permissions": [
     "tabs",
     "downloads",
-    "scripting",
-		"https://chat.openai.com/*"
+    "scripting"
   ],
   "action": {
     "default_icon": {
